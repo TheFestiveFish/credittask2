@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Times</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 style="font: italic; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center; font-size: 5vw;">The Daily Times</h1>
+
+      
+    <div id="topbar">
+        <div class="header">
+            <h1></h1>
+            <input class="searchbar" v-model="newsSearch" type="text" placeholder="Search Articles">
+            <h2 class="tagline">Your local news for in and around Melbourne since 1932.</h2>
+            <button class="searchbutton" onclick="errormsg.showModal()">Search</button>
+            <button class="subscribe" onclick="dialog.showModal()">Subscribe</button>
+        </div>
+    </div>
+
+    <dialog id="dialog">
+        <form method="dialog">
+          <p>Enter your e-mail here to subscribe to our newsletter!</p>
+          <input type="text" placeholder="Enter E-Mail">
+          <p></p>
+          <button onclick="subscribed.showModal()">Confirm E-Mail</button>
+        </form>
+    </dialog>
+
+    <dialog id="errormsg">
+        <form method="dialog">
+          <p>Error: Search function currently unavailable.</p>
+          <button>OK</button>
+        </form>
+    </dialog>
+
+    <dialog id="subscribed">
+        <form method="dialog">
+          <p>Thank you for subscribing!</p>
+          <button>OK</button>
+        </form>
+    </dialog>
+
+    <div class="sidenews">
+        <h2>Other Articles</h2>
+        <p>This space will display other articles that hyperlink to their pages. Examples:</p>
+        <p></p>
+        <img src="https://cdn.pixabay.com/photo/2023/07/12/18/20/boat-8123031_1280.jpg" style=" max-width:100%; height:auto; border: 0.1vw solid black;">
+        <a href="https://pixabay.com/photos/boat-sea-yacht-lake-water-ocean-8123031/">Boating Around Melbourne: What You Should Know</a>
+        <p></p>
+        <img src="https://cdn.pixabay.com/photo/2023/06/25/23/50/bicycle-8088372_1280.jpg" style=" max-width:100%; height:auto; border: 0.1vw solid black;">
+        <a href="https://pixabay.com/photos/bicycle-riding-exercise-hobby-road-8088372/">Best Bike Tracks around Melbourne</a>
+    </div>
+    <div class="mainnews">
+        
+        <h2>Newest/Main Article</h2>
+        <p>This is the space where the newest or main article of the site is located.</p>
+        <img src="https://cdn.pixabay.com/photo/2023/08/14/15/42/milkyway-8190232_1280.jpg" style=" max-width:65%; height:auto; border: 0.2vw solid black;">
+        <p>It also contains a dynamic image space that resizes based on browser size.</p>
+    </div>
+</body>
